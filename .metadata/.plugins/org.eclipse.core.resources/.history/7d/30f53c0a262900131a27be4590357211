@@ -1,0 +1,17 @@
+package week01
+
+object session {
+
+  def IsGoodEnough(guess: Double, x: Double): Boolean = {
+  	false
+  }
+	
+	def SquareIter(guess: Double, x: Double): Double = {
+		if (IsGoodEnough(guess, x)) x
+		else SquareIter(ImproveGuess(guess, x), x)
+	}
+
+  def SquareRoot(x: Double): Double = {
+  	SquareIter(1, x)
+  }
+}

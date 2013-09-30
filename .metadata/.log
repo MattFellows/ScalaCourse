@@ -1,0 +1,12 @@
+!SESSION 2013-09-29 16:17:17.828 -----------------------------------------------
+eclipse.buildId=3.0.1-vfinal-20130718-1727-Typesafe
+java.version=1.7.0_17
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2013-09-29 16:38:27.257
+!MESSAGE Invalid preference page path: XML Syntax
+
+!ENTRY org.scala-ide.sdt.core 1 0 2013-09-29 23:13:13.230
+!MESSAGE Timeout while resolving hyperlink in C:\Users\Matt\Documents\Scala\workspace\funsets\src\test\scala\funsets\FunSetSuite.scala at: offset: 2678, length: 0

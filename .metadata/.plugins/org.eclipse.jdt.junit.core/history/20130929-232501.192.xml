@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun funsets.FunSetSuite" project="funsets" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="funsets.FunSetSuite" time="0.01">
+    <testcase name="string take" classname="funsets.FunSetSuite" time="0.002"/>
+    <testcase name="adding ints" classname="funsets.FunSetSuite" time="0.001"/>
+    <testcase name="contains is implemented" classname="funsets.FunSetSuite" time="0.002"/>
+    <testcase name="singletonSet" classname="1" time="0.001"/>
+    <testcase name="union contains all elements" classname="funsets.FunSetSuite" time="0.001"/>
+    <testcase name="forall s" classname="even" time="0.003"/>
+  </testsuite>
+</testrun>

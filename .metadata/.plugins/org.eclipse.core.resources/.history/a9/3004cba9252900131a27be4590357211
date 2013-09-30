@@ -1,0 +1,12 @@
+package week01
+
+object session {
+
+	def squareIter(Guess: Double, x: Double): Double {
+	
+	}
+
+  def squareRoot(x: Double): Double = {
+  	0
+  }                                               //> squareRoot: (x: Double)Double
+}

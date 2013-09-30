@@ -1,0 +1,36 @@
+package week02
+
+object session {
+
+  
+  def trFactorial(x: Int): Int = {
+  	def tailRecursiveFactorial(prevMultiple: Int, currentValue: Int): Int = {
+  		if (currentValue == 1) prevMultiple else tailRecursiveFactorial(prevMultiple * currentValue, currentValue - 1)
+  	}
+  	
+  	tailRecursiveFactorial(1, x)
+  }
+  
+  def factorial(x: Int): Int = if (x == 0) 1 else x * factorial(x-1)
+  
+  trFactorial(6)
+  factorial(6)
+  
+  
+  
+  def sum(f: Int => Int, a: Int, b: Int): Int = {
+  	if (a > b) 0 else f(a) + sum(f, a+1, b)
+  }
+  
+  def trSum(f: Int => Int, a: Int, b: Int): Int = {
+  	def loop(a: Int, acc: Int): Int = {
+  		if (a > b) acc
+  		else f(a) + loop(a+1, a+acc)
+  	}
+  	loop(a, 0)
+  }
+  
+  sum(x => x, 1, 5)
+  trSum(x => x, 1, 5)
+  
+}

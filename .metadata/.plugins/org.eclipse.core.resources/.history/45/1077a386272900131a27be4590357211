@@ -1,0 +1,27 @@
+package week01
+
+object session {
+
+  def abs(x: Double) = {
+    if (x > 0) x else -x
+  }
+
+  def isGoodEnough(guess: Double, x: Double): Boolean = {
+  	abs(guess * guess - x) < 0.001
+  }
+  
+  def improveGuess(guess: Double, x: Double): Double = {
+    (guess + x / guess) / 2
+  }
+	
+	def sqrtIter(guess: Double, x: Double): Double = {
+		if (isGoodEnough(guess, x)) x
+		else sqrtIter(improveGuess(guess, x), x)
+	}
+
+  def sqrt(x: Double): Double = sqrtIter(1.0, x)
+  
+  sqrt(4)
+  sqrtIter(1.0, 4)
+  isGoodEnough(1.0, 4)
+}

@@ -1,0 +1,65 @@
+package week01
+
+object session {
+
+  def abs(x: Double) = {
+    if (x > 0) x else -x
+  }                                               //> abs: (x: Double)Double
+
+  def isGoodEnough(guess: Double, x: Double): Boolean = {
+  	abs(guess * guess - x) / x < 0.0000000000000001
+  }                                               //> isGoodEnough: (guess: Double, x: Double)Boolean
+  
+  def improveGuess(guess: Double, x: Double): Double = {
+    (guess + x / guess) / 2
+  }                                               //> improveGuess: (guess: Double, x: Double)Double
+	
+	def sqrtIter(guess: Double, x: Double): Double = {
+		if (isGoodEnough(guess, x)) guess
+		else sqrtIter(improveGuess(guess, x), x)
+	}                                         //> sqrtIter: (guess: Double, x: Double)Double
+
+  def sqrt(x: Double): Double = sqrtIter(1.0, x)  //> sqrt: (x: Double)Double
+  
+  sqrt(4)                                         //> res0: Double = 2.0
+  
+  
+  
+  
+  def countChange(money: Int, coins: List[Int]): Int = {
+    if (coins.isEmpty) 0
+    else if (money == 0) 1
+    else countChange(money, coins.tail) + countChange(money - coins.head, coins)
+  }                                               //> countChange: (money: Int, coins: List[Int])Int
+  
+  countChange(0, List(1, 2))                      //> res1: Int = 1
+  countChange(1, List(1, 2))                      //> java.lang.StackOverflowError
+                                                  //| 	at scala.collection.immutable.$colon$colon.tail(List.scala:358)
+                                                  //| 	at scala.collection.immutable.$colon$colon.tail(List.scala:356)
+                                                  //| 	at week01.session$$anonfun$main$1.countChange$1(week01.session.scala:32)
+                                                  //| 
+                                                  //| 	at week01.session$$anonfun$main$1.countChange$1(week01.session.scala:32)
+                                                  //| 
+                                                  //| 	at week01.session$$anonfun$main$1.countChange$1(week01.session.scala:32)
+                                                  //| 
+                                                  //| 	at week01.session$$anonfun$main$1.countChange$1(week01.session.scala:32)
+                                                  //| 
+                                                  //| 	at week01.session$$anonfun$main$1.countChange$1(week01.session.scala:32)
+                                                  //| 
+                                                  //| 	at week01.session$$anonfun$main$1.countChange$1(week01.session.scala:32)
+                                                  //| 
+                                                  //| 	at week01.session$$anonfun$main$1.countChange$1(week01.session.scala:32)
+                                                  //| 
+                                                  //| 	at week01.session$$anonfun$main$1.countChange$1(week01.session.scala:32)
+                                                  //| 
+                                                  //| 	at week01.session$$anonfun$main$1.countChange$1(week01.session.scala:32)
+                                                  //| 
+                                                  //| 	at week01.session$$anonfun$main$1.countChange$1(week01.session.sc
+                                                  //| Output exceeds cutoff limit.
+  countChange(2, List(1, 2))
+  countChange(3, List(1, 2))
+  countChange(4, List(1, 2))
+  countChange(5, List(1, 2))
+  countChange(6, List(1, 2))
+  countChange(10, List(1, 2))
+}

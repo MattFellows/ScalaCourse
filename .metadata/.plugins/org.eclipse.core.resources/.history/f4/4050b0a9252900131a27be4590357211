@@ -1,0 +1,7 @@
+package week01
+
+object session {
+  def squareRoot(x: Double): Double = {
+  	0
+  }                                               //> squareRoot: (x: Double)Double
+}

@@ -1,0 +1,12 @@
+package week01
+
+object session {
+
+	def SquareIter(Guess: Double, x: Double): Double = {
+		if (IsGoodEnough
+	}                                         //> squareIter: (Guess: Double, x: Double)Double
+
+  def SquareRoot(x: Double): Double = {
+  	SquareIter(1, x)
+  }                                               //> squareRoot: (x: Double)Double
+}

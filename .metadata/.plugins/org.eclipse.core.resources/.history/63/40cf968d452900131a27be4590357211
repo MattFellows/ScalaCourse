@@ -1,0 +1,49 @@
+package week02
+
+object session {
+
+  
+  def trFactorial(x: Int): Int = {
+  	def tailRecursiveFactorial(prevMultiple: Int, currentValue: Int): Int = {
+  		if (currentValue == 1) prevMultiple else tailRecursiveFactorial(prevMultiple * currentValue, currentValue - 1)
+  	}
+  	
+  	tailRecursiveFactorial(1, x)
+  }                                               //> trFactorial: (x: Int)Int
+  
+  def factorial(x: Int): Int = if (x == 0) 1 else x * factorial(x-1)
+                                                  //> factorial: (x: Int)Int
+  
+  trFactorial(6)                                  //> res0: Int = 720
+  factorial(6)                                    //> res1: Int = 720
+  
+  
+  
+  def sum(f: Int => Int, a: Int, b: Int): Int = {
+  	if (a > b) 0 else f(a) + sum(f, a+1, b)
+  }                                               //> sum: (f: Int => Int, a: Int, b: Int)Int
+  
+  def trSum(f: Int => Int, a: Int, b: Int): Int = {
+  	def loop(a: Int, acc: Int): Int = {
+  		if (a > b) acc
+  		else loop(a+1, f(a)+acc)
+  	}
+  	loop(a, 0)
+  }                                               //> trSum: (f: Int => Int, a: Int, b: Int)Int
+  
+  sum(x => x, 1, 6)                               //> res2: Int = 21
+  trSum(x => x, 1, 6)                             //> res3: Int = 21
+  
+  
+  
+  def product(f: Int => Int)(a: Int, b: Int): Int = {
+  	def loop(a: Int, acc: Int): Int = {
+  		if (a > b) acc
+  		else loop(a+1, f(a)*acc)
+  	}
+  	loop(a, 0)
+  }                                               //> product: (f: Int => Int)(a: Int, b: Int)Int
+  
+  product(x=>x)(1, 3)                             //> res4: Int = 0
+  
+}
