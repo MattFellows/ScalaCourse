@@ -14,7 +14,7 @@
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
 [0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(C:\Users\Matt\Documents\Scala\workspace\funsets\src\main\scala\funsets\FunSets.scala)[0m
 [0m[[0minfo[0m] [0mCompiling 1 Scala source to C:\Users\Matt\Documents\Scala\workspace\funsets\target\scala-2.10\classes...[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 76f3c0aa, interfacing (CompilerInterface) with Scala compiler version 2.10.2[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 2b71b978, interfacing (CompilerInterface) with Scala compiler version 2.10.2[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
 [0m[[0mdebug[0m] [0m	-deprecation[0m
 [0m[[0mdebug[0m] [0m	-feature[0m
@@ -24,7 +24,7 @@
 [0m[[0mdebug[0m] [0m	C:\Program Files\Java\jre7\lib\resources.jar;C:\Program Files\Java\jre7\lib\rt.jar;C:\Program Files\Java\jre7\lib\sunrsasign.jar;C:\Program Files\Java\jre7\lib\jsse.jar;C:\Program Files\Java\jre7\lib\jce.jar;C:\Program Files\Java\jre7\lib\charsets.jar;C:\Program Files\Java\jre7\lib\jfr.jar;C:\Program Files\Java\jre7\classes;C:\Users\Matt\.sbt\boot\scala-2.10.2\lib\scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	-classpath[0m
 [0m[[0mdebug[0m] [0m	C:\Users\Matt\Documents\Scala\workspace\funsets\target\scala-2.10\classes[0m
-[0m[[0mdebug[0m] [0mScala compilation took 0.464210341 s[0m
+[0m[[0mdebug[0m] [0mScala compilation took 0.516925338 s[0m
 [0m[[0mdebug[0m] [0mStep 2 changed sources and immdediate dependencies:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mNon-trivial strongly connected components: [0m

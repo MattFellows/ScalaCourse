@@ -1,3 +1,21 @@
 console
 submit stanford@matt-fellows.me.uk BYYjd78H43
 console
+submit stanford@matt-fellows.me.uk BYYjd78H43
+val a1 = singletonSet(1)
+      val a3 = singletonSet(3)
+      val a4 = singletonSet(4)
+      val a5 = singletonSet(5)
+      val a7 = singletonSet(7)
+      val a1000 = singletonSet(1000)
+      
+      val b13 = union(a1, a3)
+      val b134 = union(b13, a4)
+      val b1345 = union(b134, a5)
+      val b13457 = union(b1345, a7)
+console
+submit stanford@matt-fellows.me.uk BYYjd78H43
+console
+submit stanford@matt-fellows.me.uk BYYjd78H43
+console
+submit stanford@matt-fellows.me.uk BYYjd78H43

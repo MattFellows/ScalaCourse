@@ -103,10 +103,53 @@ class FunSetSuite extends FunSuite {
 
   test("union contains all elements") {
     new TestSets {
-      val s = union(s1, s2)
-      assert(contains(s, 1), "Union 1")
-      assert(contains(s, 2), "Union 2")
-      assert(!contains(s, 3), "Union 3")
+      val sTest = union(s1, s2)
+      assert(contains(sTest, 1), "Union 1")
+      assert(contains(sTest, 2), "Union 2")
+      assert(!contains(sTest, 3), "Union 3")
+      
+      val sTest2 = union(sTest, s3)
+      assert(contains(sTest2, 1), "Union 1")
+      assert(contains(sTest2, 2), "Union 2")
+      assert(contains(sTest2, 3), "Union 3")
+      
+      val a1 = singletonSet(1)
+      val a3 = singletonSet(3)
+      val a4 = singletonSet(4)
+      val a5 = singletonSet(5)
+      val a7 = singletonSet(7)
+      val a1000 = singletonSet(1000)
+      val a1001 = singletonSet(1001)
+      
+      val b13 = union(a1, a3)
+      val b134 = union(b13, a4)
+      val b1345 = union(b134, a5)
+      val b13457 = union(b1345, a7)
+      assert(contains(b13, 1), "Union 1")
+      assert(contains(b13, 3), "Union 1")
+      assert(!contains(b13, 4), "Union 1")
+      
+      assert(contains(b134, 1), "Union 2")
+      assert(contains(b134, 3), "Union 2")
+      assert(contains(b134, 4), "Union 2")
+      assert(!contains(b134, 5), "Union 2")
+      
+      assert(contains(b1345, 1), "Union 2")
+      assert(contains(b1345, 3), "Union 2")
+      assert(contains(b1345, 4), "Union 2")
+      assert(contains(b1345, 5), "Union 2")
+      assert(!contains(b1345, 7), "Union 2")
+      
+      assert(contains(b13457, 1), "Union 2")
+      assert(contains(b13457, 3), "Union 2")
+      assert(contains(b13457, 4), "Union 2")
+      assert(contains(b13457, 5), "Union 2")
+      assert(contains(b13457, 7), "Union 2")
+      assert(!contains(b13457, 1000), "Union 2")
+      
+      assert(contains(union(b13457, a1000), 1000), "Union 2")
+      
+      assert(contains(union(b13457, a1001), 1001), "Union 2")
     }
   }
   
@@ -145,7 +188,10 @@ class FunSetSuite extends FunSuite {
       val s2And4 = union(singletonSet(2), singletonSet(4))
       def even(x: Int) = x % 2 == 0
       
-      assert(map(s1And3, x => x+1) == s2And4, "s1And3 + 1 == s2And4")
+      assert(contains(map(s1And3, x => x+1), 2), "s1And3 + 1 contains 2")
+      assert(contains(map(s1And3, x => x+1), 4), "s1And3 + 1 contains 4")
+      assert(contains(map(s2And4, x => x+1), 3), "s2And4 + 1 contains 3")
+      assert(contains(map(s2And4, x => x+1), 5), "s2And4 + 1 contains 5")
     }
   }
 }

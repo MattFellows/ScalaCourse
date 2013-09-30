@@ -1,0 +1,8 @@
+package funsets
+
+import FunSets._
+
+object session {
+  val s1And3 = union(singletonSet(1), singletonSet(3))
+  val s2And4 = union(singletonSet(2), singletonSet(4))
+}

@@ -1,0 +1,15 @@
+package funsets
+
+import FunSets._
+
+object session {
+  val s1And3 = union(singletonSet(1), singletonSet(3))
+                                                  //> s1And3  : Int => Boolean = <function1>
+  val s2And4 = union(singletonSet(2), singletonSet(4))
+                                                  //> s2And4  : Int => Boolean = <function1>
+  val test = map(s1And3, x => x + 1)              //> test  : Int => Boolean = <function1>
+  
+  printSet(s1And3)                                //> {1,3}
+  printSet(s2And4)                                //> {2,4}
+  printSet(test)                                  //> {}
+}
